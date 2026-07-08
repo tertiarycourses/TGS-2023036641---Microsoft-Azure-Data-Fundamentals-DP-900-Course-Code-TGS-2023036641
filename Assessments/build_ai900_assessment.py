@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Build WSQ assessment documents for Microsoft Azure AI Fundamentals (AI-900).
 
-Outputs are written to Resources/Assessment:
+Outputs are written to Assessments:
 - WA (SAQ) question paper and answer guide
 - PP Assessment question paper and answer guide
 
@@ -324,25 +324,35 @@ def cover(doc: Document, instrument: str) -> None:
     if TERTIARY_MARK.exists():
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.paragraph_format.space_before = Pt(38)
-        p.paragraph_format.space_after = Pt(4)
-        p.add_run().add_picture(str(TERTIARY_MARK), width=Inches(1.10))
-    para(doc, ORG, 10, True, INK, WD_ALIGN_PARAGRAPH.CENTER)
-    para(doc, UEN, 8, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
-    p = para(doc, instrument.upper(), 24, True, BLUE, WD_ALIGN_PARAGRAPH.CENTER)
-    p.paragraph_format.space_before = Pt(10)
-    para(doc, "For", 8, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
+        p.paragraph_format.space_before = Pt(46)
+        p.paragraph_format.space_after = Pt(8)
+        p.add_run().add_picture(str(TERTIARY_MARK), width=Inches(1.55))
+    p = para(doc, ORG, 11.5, True, INK, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(2)
+    p = para(doc, UEN, 8.5, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(20)
+    p = para(doc, instrument.upper(), 27, True, BLUE, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(12)
+    p = para(doc, "For", 9, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(8)
     if COURSE_BADGE.exists():
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.paragraph_format.space_after = Pt(14)
-        p.add_run().add_picture(str(COURSE_BADGE), width=Inches(0.95))
-    para(doc, TITLE, 18, True, INK, WD_ALIGN_PARAGRAPH.CENTER)
-    para(doc, f"TGS Ref No: {CODE}", 9, False, INK, WD_ALIGN_PARAGRAPH.CENTER)
-    para(doc, "Conducted by", 8, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
-    para(doc, ORG, 10, True, INK, WD_ALIGN_PARAGRAPH.CENTER)
-    para(doc, UEN, 8, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
-    para(doc, f"Version {VERSION}", 10, True, BLUE, WD_ALIGN_PARAGRAPH.CENTER)
+        p.paragraph_format.space_after = Pt(30)
+        p.add_run().add_picture(str(COURSE_BADGE), width=Inches(1.35))
+    p = para(doc, TITLE, 21, True, INK, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(13)
+    p = para(doc, f"TGS Ref No: {CODE}", 10, False, INK, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(12)
+    p = para(doc, "Conducted by", 8.5, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(1)
+    p = para(doc, ORG, 10.5, True, INK, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(1)
+    p = para(doc, UEN, 8.5, False, GREY, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(13)
+    p = para(doc, f"Version {VERSION}", 11, True, BLUE, WD_ALIGN_PARAGRAPH.CENTER)
+    p.paragraph_format.space_after = Pt(0)
     doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
 
 
