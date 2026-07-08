@@ -22,7 +22,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "Resources" / "Assessment"
+OUT = ROOT / "Assessments"
 ASSETS = ROOT / "courseware" / "assets"
 TERTIARY_MARK = ASSETS / "imported-reference-media" / "dp900-image2.png"
 COURSE_BADGE = ASSETS / "ai900-course-badge.png"
