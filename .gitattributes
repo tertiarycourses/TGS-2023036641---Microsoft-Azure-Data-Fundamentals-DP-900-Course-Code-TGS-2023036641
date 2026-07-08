@@ -1,0 +1,10 @@
+*.docx binary
+*.pptx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.md text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
