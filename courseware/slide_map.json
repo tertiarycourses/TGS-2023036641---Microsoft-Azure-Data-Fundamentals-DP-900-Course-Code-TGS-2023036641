@@ -1,0 +1,79 @@
+{
+  "labs": {
+    "lab_01": {
+      "overview": 23,
+      "steps": 24,
+      "verify": 25
+    },
+    "lab_02": {
+      "overview": 26,
+      "steps": 27,
+      "verify": 28
+    },
+    "lab_03": {
+      "overview": 33,
+      "steps": 34,
+      "verify": 35
+    },
+    "lab_04": {
+      "overview": 36,
+      "steps": 37,
+      "verify": 38
+    },
+    "lab_05": {
+      "overview": 43,
+      "steps": 44,
+      "verify": 45
+    },
+    "lab_06": {
+      "overview": 46,
+      "steps": 47,
+      "verify": 48
+    },
+    "lab_07": {
+      "overview": 53,
+      "steps": 54,
+      "verify": 55
+    },
+    "lab_08": {
+      "overview": 56,
+      "steps": 57,
+      "verify": 58
+    },
+    "lab_09": {
+      "overview": 63,
+      "steps": 64,
+      "verify": 65
+    },
+    "lab_10": {
+      "overview": 66,
+      "steps": 67,
+      "verify": 68
+    }
+  },
+  "topics": {
+    "topic_01": {
+      "divider": 20,
+      "concepts": 21
+    },
+    "topic_02": {
+      "divider": 30,
+      "concepts": 31
+    },
+    "topic_03": {
+      "divider": 40,
+      "concepts": 41
+    },
+    "topic_04": {
+      "divider": 50,
+      "concepts": 51
+    },
+    "topic_05": {
+      "divider": 60,
+      "concepts": 61
+    }
+  },
+  "admin": {
+    "cover": 1
+  }
+}
